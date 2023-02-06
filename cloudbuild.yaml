@@ -1,0 +1,3 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'gcr.io/capstone-project-375618/capstone-project-375618/dchristlieb/capstoneproject':$COMMIT_SHA, '.']

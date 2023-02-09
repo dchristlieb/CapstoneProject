@@ -12,7 +12,18 @@ signInWithEmailAndPassword(auth, email, password)
     const errorMessage = error.message;
   });
 
-  <script>
+<div>Identity Platform Quickstart</div>
+<div id="message">Loading...</div>
+<script src="https://www.gstatic.com/firebasejs/8.0/firebase.js"></script>
+<script>
+  var config = {
+    apiKey: "AIzaSyD_ei--SyNbBsfC7kwn4LSmDJRce5-ZWbk",
+    authDomain: "capstone-project-375618.firebaseapp.com",
+  };
+  firebase.initializeApp(config);
+</script>
+
+<script>
     var email = "EMAIL_ID";
     var password = "PASSWORD";
   

@@ -2,13 +2,17 @@
  # Build the container image
  - name: 'gcr.io/cloud-builders/docker'
    args: ['build', '-t', 'us.gcr.io/capstone-project-375618/website:$COMMIT_SHA', '.']
-  options:
-  logging: CLOUD_LOGGING_ONLY  
+logsBucket: 'gs://dustinchristlieb_log_bucket'
+serviceAccount: 'projects/capstone-project-375618/serviceAccounts/website@capstone-project-375618.iam.gserviceaccount.com'
+ options:
+  logging: GCS_ONLY  
  # Push the container image to Artifact Registry
  - name: 'gcr.io/cloud-builders/docker'
    args: ['push', 'us.gcr.io/capstone-project-375618/website:$COMMIT_SHA']
-  options:
-  logging: CLOUD_LOGGING_ONLY 
+logsBucket: 'gs://dustinchristlieb_log_bucket'
+serviceAccount: 'projects/capstone-project-375618/serviceAccounts/website@capstone-project-375618.iam.gserviceaccount.com'
+ options:
+  logging: GCS_ONLY
  # Deploy container image to Cloud Run
  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
    entrypoint: gcloud
@@ -22,5 +26,7 @@
    - 'us-central1'
   images:
   - 'us.gcr.io/capstone-project-375618/website:$COMMIT_SHA'
-  options:
-  logging: CLOUD_LOGGING_ONLY  
+logsBucket: 'gs://dustinchristlieb_log_bucket'
+serviceAccount: 'projects/capstone-project-375618/serviceAccounts/website@capstone-project-375618.iam.gserviceaccount.com'
+ options:
+  logging: GCS_ONLY

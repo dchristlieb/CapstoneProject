@@ -5,7 +5,7 @@
 logsBucket: 'gs://dustinchristlieb_log_bucket'
 serviceAccount: 'projects/capstone-project-375618/serviceAccounts/website@capstone-project-375618.iam.gserviceaccount.com'
  options:
-  logging: GCS_ONLY  
+  logging: GCS_ONLY
  # Push the container image to Artifact Registry
  - name: 'gcr.io/cloud-builders/docker'
    args: ['push', 'us.gcr.io/capstone-project-375618/website:$COMMIT_SHA']

@@ -20,9 +20,8 @@
    - 'capstoneproject@capstone-project-375618.iam.gserviceaccount.com'
 images:
 - 'us-central1-docker.pkg.dev/capstone-project-375618/docker/website:$COMMIT_SHA'
-logsBucket: 
 options:
-  logging: CLOUD_LOGGING_ONLY
+  logging: NONE 
 
 
   

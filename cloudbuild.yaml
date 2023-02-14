@@ -16,6 +16,8 @@
    - 'us-central1-docker.pkg.dev/capstone-project-375618/dockerwebsite:$COMMIT_SHA'
    - '--region'
    - 'us-central1'
+   - '--service-account'
+   - 'capstoneproject@capstone-project-375618.iam.gserviceaccount.com'
 images:
 - 'us-central1-docker.pkg.dev/capstone-project-375618/dockerwebsite:$COMMIT_SHA'
 options:

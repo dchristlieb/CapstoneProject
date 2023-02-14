@@ -2,11 +2,9 @@
  # Build the container image
  - name: 'gcr.io/cloud-builders/docker'
    args: ['build', '-t', us-central1-docker.pkg.dev/capstone-project-375618/dockerwebsite:$COMMIT_SHA', '.']
-serviceAccount: 'projects/capstone-project-375618/serviceAccounts/website@capstone-project-375618.iam.gserviceaccount.com'
  # Push the container image to Artifact Registry
  - name: 'gcr.io/cloud-builders/docker'
    args: ['push', us-central1-docker.pkg.dev/capstone-project-375618/dockerwebsite:$COMMIT_SHA']
-serviceAccount: 'projects/capstone-project-375618/serviceAccounts/website@capstone-project-375618.iam.gserviceaccount.com'
  # Deploy container image to Cloud Run
  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
    entrypoint: gcloud
@@ -20,6 +18,6 @@ serviceAccount: 'projects/capstone-project-375618/serviceAccounts/website@capsto
    - 'us-central1'
   images:
   - us-central1-docker.pkg.dev/capstone-project-375618/dockerwebsite:$COMMIT_SHA'
-serviceAccount: 'projects/capstone-project-375618/serviceAccounts/website@capstone-project-375618.iam.gserviceaccount.com'
+
 
   

@@ -19,7 +19,7 @@
   images:
   - 'us-central1-docker.pkg.dev/capstone-project-375618/dockerwebsite:$COMMIT_SHA'
 options:
-  logging: GCS_ONLY
+  logging: CLOUD_LOGGING_ONLY
 
 
   

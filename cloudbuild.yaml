@@ -1,10 +1,10 @@
  steps:
  # Build the container image
  - name: 'gcr.io/cloud-builders/docker'
-   args: ['build', '-t', us-central1-docker.pkg.dev/capstone-project-375618/dockerwebsite:$COMMIT_SHA', '.']
+   args: ['build', '-t', 'us-central1-docker.pkg.dev/capstone-project-375618/dockerwebsite:$COMMIT_SHA', '.']
  # Push the container image to Artifact Registry
  - name: 'gcr.io/cloud-builders/docker'
-   args: ['push', us-central1-docker.pkg.dev/capstone-project-375618/dockerwebsite:$COMMIT_SHA']
+   args: ['push', 'us-central1-docker.pkg.dev/capstone-project-375618/dockerwebsite:$COMMIT_SHA']
  # Deploy container image to Cloud Run
  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
    entrypoint: gcloud

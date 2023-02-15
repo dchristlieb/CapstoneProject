@@ -17,18 +17,9 @@
    - 'us-central1'
    - '--service-account'
    - 'capstoneproject@capstone-project-375618.iam.gserviceaccount.com'
-    spec:
-      containerConcurrency: 80
-      timeoutSeconds: 300
-      containers:
-      - image: us-central1-docker.pkg.dev/capstone-project-375618/docker/website:$COMMIT_SHA
-        ports:
-        - name: http1
-          containerPort: 80
-        resources:
-          limits:
-            cpu: 1
-            memory: 512Mi
+limits:
+  - 'cpu 1'
+  - 'memory: 512Mi'
 images:
 - 'us-central1-docker.pkg.dev/capstone-project-375618/docker/website:$COMMIT_SHA'
 options:

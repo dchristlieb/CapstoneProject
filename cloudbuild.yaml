@@ -16,7 +16,7 @@
    - '--region=us-central1'
    - '--service-account=website@capstone-project-375618.iam.gserviceaccount.com'
 limits:
-  - 'containerConcurrency: 10"
+  - 'containerConcurrency: 10'
   - 'cpu 1'
   - 'memory: 512Mi'
 images:

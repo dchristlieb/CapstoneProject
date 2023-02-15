@@ -17,7 +17,7 @@
    - 'us-central1'
    - '--service-account'
    - 'capstoneproject@capstone-project-375618.iam.gserviceaccount.com'
-      spec:
+    spec:
       containerConcurrency: 80
       timeoutSeconds: 300
       containers:

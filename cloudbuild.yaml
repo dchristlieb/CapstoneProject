@@ -13,10 +13,8 @@
    - 'deploy'
    - 'website'
    - '--image=us-central1-docker.pkg.dev/capstone-project-375618/docker/website:$COMMIT_SHA'
-   - '--region'
-   - 'us-central1'
-   - '--service-account'
-   - 'capstoneproject@capstone-project-375618.iam.gserviceaccount.com'
+   - '--region=us-central1'
+   - '--service-account=capstoneproject@capstone-project-375618.iam.gserviceaccount.com'
 limits:
   - 'cpu 1'
   - 'memory: 512Mi'

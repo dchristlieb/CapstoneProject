@@ -16,10 +16,10 @@
    - '--region=us-central1'
    - '--service-account=website@capstone-project-375618.iam.gserviceaccount.com'
    - '--allow-unauthenticated'
+   - '--containerConcurrency: 10'
 limits:
   - 'cpu 1'
   - 'memory: 512Mi'
-  - 'containerConcurrency: 10'
 images:
 - 'us-central1-docker.pkg.dev/capstone-project-375618/docker/website:$COMMIT_SHA'
 options:

@@ -15,14 +15,15 @@
    - '--image=us-central1-docker.pkg.dev/capstone-project-375618/docker/website:$COMMIT_SHA'
    - '--region=us-central1'
    - '--service-account=website@capstone-project-375618.iam.gserviceaccount.com'
+   - 'containerConcurrency: 10'
+   - '--allow-unauthenticated'
 limits:
-  - 'containerConcurrency: 10'
   - 'cpu 1'
   - 'memory: 512Mi'
 images:
 - 'us-central1-docker.pkg.dev/capstone-project-375618/docker/website:$COMMIT_SHA'
 options:
-  logging: NONE 
+  logging: CLOUD_LOGGING_ONLY 
 
 
   

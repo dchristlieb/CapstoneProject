@@ -17,7 +17,7 @@
    - '--service-account=website@capstone-project-375618.iam.gserviceaccount.com'
    - '--allow-unauthenticated'
    - '--concurrency=10'
-   - '--logsBucket=gs://dustinchristlieb_log_bucket'
+logsBucket: 'gs://dustinchristlieb_log_bucket'
 options:
   logging: GCS_ONLY
 limits:

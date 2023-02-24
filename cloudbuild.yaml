@@ -19,7 +19,7 @@
    - '--concurrency=10'
 logsBucket: 'gs://dustinchristlieb_log_bucket'
 options:
-  logging: GCS_ONLY
+  logging: 'NONE'
 limits:
   - 'cpu 1'
   - 'memory: 512Mi'

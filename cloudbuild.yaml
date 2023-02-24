@@ -22,8 +22,9 @@ limits:
   - 'memory: 512Mi'
 images:
 - 'us-central1-docker.pkg.dev/capstone-project-375618/docker/website:$COMMIT_SHA'
+logsBucket: 'gs://dustinchristlieb_log_bucket'
 options:
-  logging: CLOUD_LOGGING_ONLY 
+  logging: GCS_ONLY
 
 
   

@@ -17,14 +17,15 @@
    - '--service-account=website@capstone-project-375618.iam.gserviceaccount.com'
    - '--allow-unauthenticated'
    - '--concurrency=10'
+   logsBucket: 'gs://dustinchristlieb_log_bucket'
+options:
+  logging: GCS_ONLY
 limits:
   - 'cpu 1'
   - 'memory: 512Mi'
 images:
 - 'us-central1-docker.pkg.dev/capstone-project-375618/docker/website:$COMMIT_SHA'
-logsBucket: 'gs://dustinchristlieb_log_bucket'
-options:
-  logging: GCS_ONLY
+
 
 
   

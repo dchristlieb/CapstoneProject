@@ -1,4 +1,6 @@
 # CapstoneProject
  CapstoneProject for Associates Degree
 
-App located at: https://app.dustinchristlieb.com/ 
+Dynamic app located at: https://app.dustinchristlieb.com/ 
+
+Static Website located at https://www.dustinchristlieb.com
